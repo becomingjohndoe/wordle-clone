@@ -3,5 +3,5 @@ interface KeyProps {
 }
 
 export const Key = ({ value }: KeyProps) => {
-	return <div style={{ width: `58px`, height: "58px" }}>{value}</div>;
+	return <div className="key">{value}</div>;
 };

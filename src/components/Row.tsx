@@ -22,7 +22,7 @@ export const Row = () => {
 		<div className="row">
 			{guesses.map((guess, index) => {
 				return guess.map((letter, row) => {
-					return <Cell state={checkGuess(letter, row)} value={letter} key={index} />;
+					return <Cell state={checkGuess(letter, row)} value={letter} key={row} />;
 				});
 			})}
 		</div>

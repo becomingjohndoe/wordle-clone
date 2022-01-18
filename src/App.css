@@ -37,13 +37,24 @@
 	}
 }
 
-.main {
-	/* max-width: 440px; */
-}
-
 .keyboard-row {
 	display: flex;
 	justify-content: center;
+}
+
+.key {
+	width: 58px;
+	height: 58px;
+	border: darkgrey 1px solid;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	padding: 5px;
+}
+
+.key:hover {
+	cursor: pointer;
+	background-color: #e0e0e0;
 }
 
 .row {
