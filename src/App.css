@@ -37,7 +37,25 @@
 	}
 }
 
+.main {
+	/* max-width: 440px; */
+}
+
 .keyboard-row {
+	display: flex;
+	justify-content: center;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+.cell {
+	flex: 1 0 calc(17% - 10px); /* explanation below */
+	margin: 5px;
+	height: 58px;
+	border: #282c34 1px solid;
+	align-items: center;
 	display: flex;
 	justify-content: center;
 }

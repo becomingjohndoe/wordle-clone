@@ -1,6 +1,10 @@
-import { Key } from "./Key";
 import { Keyboard } from "./Keyboard";
-
+import { Row } from "./Row";
 export const Game = () => {
-	return <Keyboard />;
+	return (
+		<div className="main">
+			<Row />
+			<Keyboard />
+		</div>
+	);
 };
