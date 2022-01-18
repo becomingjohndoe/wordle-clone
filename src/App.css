@@ -50,7 +50,29 @@
 	display: flex;
 	flex-wrap: wrap;
 }
-.cell {
+.correct {
+	flex: 1 0 calc(17% - 10px); /* explanation below */
+	margin: 5px;
+	height: 58px;
+	border: #282c34 1px solid;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	background: rgb(2, 121, 2);
+}
+
+.includes {
+	flex: 1 0 calc(17% - 10px); /* explanation below */
+	margin: 5px;
+	height: 58px;
+	border: #282c34 1px solid;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	background: coral;
+}
+
+.incorrect {
 	flex: 1 0 calc(17% - 10px); /* explanation below */
 	margin: 5px;
 	height: 58px;

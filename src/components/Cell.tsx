@@ -1,7 +1,8 @@
 type Props = {
 	value: string;
+	state: string;
 };
 
-export const Cell = ({ value }: Props) => {
-	return <div className="cell">{value}</div>;
+export const Cell = ({ value, state }: Props) => {
+	return <div className={state}>{value}</div>;
 };
