@@ -16,7 +16,7 @@ export const Game = () => {
 	return (
 		<div className="main">
 			<Row guesses={guesses} word={word} />
-			<Keyboard />
+			<Keyboard setGuesses={setGuesses} tick={tick} guesses={guesses} />
 		</div>
 	);
 };

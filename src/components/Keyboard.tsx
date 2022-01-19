@@ -1,9 +1,18 @@
 import { Key } from "./Key";
+import React from "react";
+type Props = {
+	setGuesses: (guesses: string[][]) => void;
+	guesses: string[][];
+	tick: number;
+};
 
-export const Keyboard = () => {
+export const Keyboard = ({ setGuesses, tick, guesses }: Props) => {
 	const handleClick = (e: React.MouseEvent<Element>) => {
 		if (e) {
-			console.log(e.currentTarget.innerHTML);
+			const newguesses: string[][] = [...guesses];
+			const turn: number = newguesses[tick].findIndex((e) => e === "");
+			newguesses[tick][turn] = e.currentTarget.innerHTML;
+			setGuesses(newguesses);
 		}
 	};
 
