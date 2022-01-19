@@ -45,16 +45,27 @@
 .key {
 	width: 58px;
 	height: 58px;
-	border: darkgrey 1px solid;
+	background-color: rgb(230, 224, 224);
 	align-items: center;
 	display: flex;
 	justify-content: center;
-	padding: 5px;
+	padding: 2px;
+	margin: 16px 3px 0 0;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0 9px #999;
+	outline: none;
 }
 
 .key:hover {
 	cursor: pointer;
 	background-color: #e0e0e0;
+}
+
+.key:active {
+	background-color: #cfcfcf;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
 }
 
 .row {
