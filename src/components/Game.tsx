@@ -13,10 +13,23 @@ export const Game = () => {
 		["", "", "", "", ""],
 	]);
 
+	const checkWin = (): boolean => {
+		if (JSON.stringify(word) === JSON.stringify(guesses[tick])) {
+			return true;
+		}
+		return false;
+	};
+
 	return (
 		<div className="main">
 			<Row guesses={guesses} word={word} />
-			<Keyboard setGuesses={setGuesses} tick={tick} guesses={guesses} />
+			<Keyboard
+				setGuesses={setGuesses}
+				tick={tick}
+				guesses={guesses}
+				checkWin={checkWin}
+				setTick={setTick}
+			/>
 		</div>
 	);
 };

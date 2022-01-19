@@ -4,9 +4,17 @@ type Props = {
 	setGuesses: (guesses: string[][]) => void;
 	guesses: string[][];
 	tick: number;
+	checkWin: () => boolean;
+	setTick: (tick: number) => void;
 };
 
-export const Keyboard = ({ setGuesses, tick, guesses }: Props) => {
+export const Keyboard = ({
+	setGuesses,
+	tick,
+	guesses,
+	checkWin,
+	setTick,
+}: Props) => {
 	const handleClick = (e: React.MouseEvent<Element>) => {
 		if (e) {
 			const newguesses: string[][] = [...guesses];
@@ -14,6 +22,11 @@ export const Keyboard = ({ setGuesses, tick, guesses }: Props) => {
 			newguesses[tick][turn] = e.currentTarget.innerHTML;
 			setGuesses(newguesses);
 		}
+	};
+
+	const handleEnter = () => {
+		if (checkWin()) alert("You Win!");
+		else alert("You Lose!");
 	};
 
 	return (
@@ -42,7 +55,7 @@ export const Keyboard = ({ setGuesses, tick, guesses }: Props) => {
 				<Key onClick={handleClick} value="L" />
 			</div>
 			<div className="keyboard-row">
-				<Key onClick={handleClick} value="ENTER" />
+				<Key onClick={handleEnter} value="ENTER" />
 
 				<Key onClick={handleClick} value="Z" />
 				<Key onClick={handleClick} value="X" />
