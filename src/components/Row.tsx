@@ -7,16 +7,28 @@ type Props = {
 
 export const Row = ({ guesses, word }: Props) => {
 	// check if guess was correct
-	const checkGuess = (letter: string, row: number): string => {
-		if (letter === word[row]) return "correct";
-		else if (word.includes(letter)) return "includes";
+	const checkGuess = (
+		letter: string,
+		row: number,
+		guessIndex: number
+	): string => {
+		if (!guesses[guessIndex].includes("")) {
+			if (letter === word[row]) return "correct";
+			else if (word.includes(letter)) return "includes";
+		}
 		return "incorrect";
 	};
 	return (
 		<div className="row">
-			{guesses.map((guess) => {
+			{guesses.map((guess, guessIndex) => {
 				return guess.map((letter, row) => {
-					return <Cell state={checkGuess(letter, row)} value={letter} key={row} />;
+					return (
+						<Cell
+							state={checkGuess(letter, row, guessIndex)}
+							value={letter}
+							key={row}
+						/>
+					);
 				});
 			})}
 		</div>

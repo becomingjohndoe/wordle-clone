@@ -6,7 +6,7 @@ export const Game = () => {
 	const [word, setWord] = useState(["R", "E", "A", "C", "T"]);
 	const [guesses, setGuesses] = useState([
 		["", "", "", "", ""],
-		["R", "E", "A", "C", "p"],
+		["R", "E", "A", "", "p"],
 		["R", "E", "A", "C", "T"],
 		["R", "E", "A", "C", "T"],
 		["R", "E", "A", "C", "T"],
