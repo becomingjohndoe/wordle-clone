@@ -26,7 +26,7 @@ export const Keyboard = ({
 
 	const handleEnter = () => {
 		if (checkWin()) alert("You Win!");
-		else alert("You Lose!");
+		else setTick(tick + 1);
 	};
 
 	return (
