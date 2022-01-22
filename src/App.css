@@ -37,14 +37,19 @@
 	}
 }
 
+.main {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
 .keyboard-row {
 	display: flex;
 	justify-content: center;
 }
 
 .key {
-	width: 58px;
-	height: 58px;
+	width: 43px;
+	height: 43px;
 	background-color: rgb(230, 224, 224);
 	align-items: center;
 	display: flex;
@@ -71,33 +76,25 @@
 .row {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 .correct {
-	flex: 1 0 calc(17% - 10px); /* explanation below */
-	margin: 5px;
-	height: 58px;
-	border: #282c34 1px solid;
-	align-items: center;
-	display: flex;
-	justify-content: center;
 	background: rgb(2, 121, 2);
 }
 
 .includes {
-	flex: 1 0 calc(17% - 10px); /* explanation below */
-	margin: 5px;
-	height: 58px;
-	border: #282c34 1px solid;
-	align-items: center;
-	display: flex;
-	justify-content: center;
 	background: coral;
 }
 
 .incorrect {
-	flex: 1 0 calc(17% - 10px); /* explanation below */
+	background: darkgrey;
+}
+
+.cell {
+	flex: 0 0 calc(17% - 10px); /* explanation below */
 	margin: 5px;
 	height: 58px;
+	border-radius: 5px;
 	border: #282c34 1px solid;
 	align-items: center;
 	display: flex;
