@@ -36,9 +36,8 @@ export const Keyboard = ({
 		newEnterPressed[tick] = true;
 		setEnterPressed(newEnterPressed);
 		if (checkWin()) alert("You Win!");
-		else {
-			setTick(tick + 1);
-		}
+
+		setTick(tick + 1);
 	};
 
 	const handleDelete = () => {
