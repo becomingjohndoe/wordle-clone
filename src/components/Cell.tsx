@@ -4,5 +4,5 @@ type Props = {
 };
 
 export const Cell = ({ value, state }: Props) => {
-	return <div className={state}>{value}</div>;
+	return <div className={`cell ${state}`}>{value}</div>;
 };
